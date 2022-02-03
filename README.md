@@ -1,3 +1,7 @@
+# Cells 3.x with Rails 6 support
+
+The main goal of this fork is to update the Cells 3.x up to Rails 6 and up Standard(ish)
+
 # Cells
 
 *View Components for Rails.*

@@ -75,12 +75,14 @@ module Cells
   end
 end
 
-# Add extended ActionController behaviour.
-ActionController::Base.class_eval do
-  include ::Cells::Rails::ActionController
-end
+ActiveSupport.on_load(:action_controller) do
+  # Add extended ActionController behaviour.
+  ActionController::Base.class_eval do
+    include ::Cells::Rails::ActionController
+  end
 
-# Add extended ActionView behaviour.
-ActionView::Base.class_eval do
-  include ::Cells::Rails::ActionView
+  # Add extended ActionView behaviour.
+  ActionView::Base.class_eval do
+    include ::Cells::Rails::ActionView
+  end
 end
