@@ -1,4 +1,9 @@
 class Cell::Base::View < ActionView::Base
+
+  def compiled_method_container
+    return self.class
+  end
+
   def self.prepare(modules)
     # TODO: remove for 4.0 if PR https://github.com/rails/rails/pull/6826 is merged.
     Class.new(self) do  # DISCUSS: why are we mixing that stuff into this _anonymous_ class at all? that makes things super complicated.
